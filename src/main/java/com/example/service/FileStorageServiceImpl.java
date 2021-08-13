@@ -40,14 +40,10 @@ public class FileStorageServiceImpl implements FileStorageService {
 		} catch (IOException ioe) {
 			throw new FileStorageException("could not store file " + fileName + " Please try again, " + ioe);
 		}
+		sagar
 
 	}
 
-	@Override
-	public FileModel getFile(String fileId) {
 
-		return dbFileRepository.findById(fileId)
-				.orElseThrow(() -> new MyFileNotFoundException("File not found with id " + fileId));
-	}
 
 }
